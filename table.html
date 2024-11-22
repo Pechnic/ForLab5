@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабораторная работа 5 (таблица)</title>
+	<link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div class = header>
+        <a href="Lab5(p1).html"> Основная страница </a>
+        <a href="Lab5(p2).html"> Позиционирование элементов </a>
+		<a href="table.html"> Таблица</a>
+    </div>
+    <div>
+        <table>
+            <caption>Список товаров</caption>
+            <tr> 
+                <th>№</th>
+                <th>Название товара</th>
+                <th>Цена в рублях</th>
+                <th>Количество товара на складе</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Хлопья кукурузные "Crunchy"</td>
+                <td>169</td>
+                <td>16 000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Консервированная говядина "Candidate"</td>
+                <td>319</td>
+                <td>74 000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Кетчуп "Thomas"</td>
+                <td>87</td>
+                <td>55 000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Вода газированная "Crystal"</td>
+                <td>45</td>
+                <td>90 000</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Макароны "Mario"</td>
+                <td>99</td>
+                <td>3 000</td>
+            </tr>
+        </table>
+        <div> 
+            <form id = "addForm">
+                <label for="for№">№:</label><br>
+                <input type = "number" id = "for№" name="for№"><br>
+                <label for="forName">Название товара:</label><br>
+                <input type = "text" id = "forName" name = "forName"><br>
+                <label for="forPrice">Цена в рублях:</label><br>
+                <input type = "number" id = "forPrice" name = "forPrice"><br>
+                <label for="forAmount">Количество товара на складе:</label><br>
+                <input type = "number" id = "forAmount" name = "forAmount"><br>
+                <input type = "submit" value="Добавить">
+            </form>
+        </div>
+        <script>
+            document.getElementById("addForm").addEventListener("submit", (event) => {
+              const form = new FormData(event.target);
+              console.log(Object.fromEntries(form));
+              event.preventDefault();
+            });
+          </script>
+    </div>
+</body>
+</html>

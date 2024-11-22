@@ -1,0 +1,55 @@
+body 
+{
+    background: rgb(238, 238, 238);
+}
+
+a
+{
+    font-size: 24;
+    color: rgb(116, 42, 235);
+    text-underline-position: below;
+    margin: 10px;
+}
+
+.header
+{
+    display: flex;
+    justify-content: right;
+    margin: 10px;
+    color: blue;
+}
+
+table
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td
+{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th
+{
+    border: 1px solid black;
+    text-align: left;
+    padding: 5px;
+    background-color: bisque;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(231, 216, 250);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(252, 217, 224);
+}
+
+caption
+{
+    font-size: 24;
+    color: rgb(82, 29, 29);
+    margin: 8px;
+}
